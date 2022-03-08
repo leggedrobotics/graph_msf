@@ -1,6 +1,9 @@
 # GMFCL: Graph-based Multi-sensor Fusion for Consistent Localization of Autonomous Construction Robots
 <img src="images/title_img.png" width="50%" height="50%">!
 
+* Paper: [link](https://arxiv.org/pdf/2203.01389.pdf)
+* Video: [link](https://youtu.be/syTV7Ui36jg)
+
 **The work is currently under review. The corresponding code will be published upon publication of the paper.**
 From the Robotics Systems Lab at ETH Zurich, Switzerland.
 # What will be released
