@@ -3,8 +3,9 @@
 
 * Paper: [link](https://arxiv.org/pdf/2203.01389.pdf)
 * Video: [link](https://youtu.be/syTV7Ui36jg)
+* Project Page: [link](https://sites.google.com/leggedrobotics.com/gmfcl)
 
-**The work is currently under review. The corresponding code will be published upon publication of the paper.**
+**The work is accepted to ICRA 2022. The corresponding code will be made publicly available in May 2022.**
 From the Robotics Systems Lab at ETH Zurich, Switzerland.
 # What will be released
 We will release the full code of a fast graph-based sensor fusion approach. The steps needed to reproduce the results of the paper will be detailed in the instructions.
