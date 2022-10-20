@@ -19,13 +19,17 @@ The adding of the measurements and the optimization of the graph are performed i
 In contrast to classical filtering-based approaches this graph-based structure also allows for a simple incorporation of
 delayed sensor measurements up to the smoothingLag.
 
-The framework is still under development and will be updated, extended, and more generalized in the future. There are two 
-intended **use-cases**:
+There are two intended **use-cases**:
 
 1. Using the dual graph formulation as proosed in [1]. In this part of the implementation there are hard-coded 
 components for this specific use-case.
 2. A more general graph-based multi-sensor fusion. An example for fusing LiDAR odometry and IMU on the dataset of the 
 [ETH Zurich Robotic Summer School](https://ethz-robotx.github.io/SuperMegaBot/) will follow shortly.
+
+<img src="doc/titleimg.png" width="50%" height="50%">
+**Copyright IEEE**
+
+**Disclaimer:** The framework is still under development and will be updated, extended, and more generalized in the future.
 
 ## Modules and Packages
 This repository contains the following modules:
@@ -81,8 +85,6 @@ If you find this code useful, please consider citing
   organization={IEEE}
 }
 ```
-<img src="doc/titleimg.png" width="50%" height="50%">
-*Copyright IEEE*
 
 ## Acknowledgements
 The authors thank Marco Tranzatto, Simon Kerscher, Dominic Jud, Lorenzo Terenzi, Timo Schoenegg and the remaining HEAP 
