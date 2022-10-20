@@ -4,8 +4,7 @@
 , [Shehryar Khattak](https://www.linkedin.com/in/shehryar-khattak/)
 , [Marco Hutter](https://rsl.ethz.ch/the-lab/people/person-detail.MTIxOTEx.TGlzdC8yNDQxLC0xNDI1MTk1NzM1.html)
 
-<img src="doc/graph_msf.gif" width="60%" height="60%">
-<img src="doc/titleimg.png" width="39%" height="39%">
+<img src="doc/graph_msf.gif" width="80%" height="60%">
 
 *Copyright IEEE*
 
