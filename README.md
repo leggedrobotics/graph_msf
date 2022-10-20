@@ -33,8 +33,8 @@ components for this specific use-case.
 ## Modules and Packages
 This repository contains the following modules:
 
-1. _GraphMsf_: The core library for the sensor fusion. This library is only dependant on Eigen and GTSAM.
-2. _GraphMsfRos_: This package provides a basic class for using GraphMsf in ROS. It is dependant on GraphMsf and ROS.
+1. _graph_msf_: The core library for the sensor fusion. This library is only dependant on Eigen and GTSAM.
+2. _graph_msf_ros_: This package provides a basic class for using GraphMsf in ROS. It is dependant on GraphMsf and ROS.
 3. _examples_: Examples on how to use GraphMsf and GraphMsfRos.
    - [./examples/excavator_dual_graph](./examples/excavator_dual_graph) from [1]. This is the implementation as presented in the paper.
    - Single-graph standalone fusion example following soon.
@@ -46,7 +46,7 @@ For the installation instructions please refer to the [./doc/installation.md](./
 Instructions on how to use and run the examples can be found in the [./examples/README.md](./examples/README.md).
 
 ## Data
-We provide some example dataset from our excavator HEAP. The data contains
+We provide some example datasets from our excavator HEAP. The data contains
 * IMU measurements,
 * LiDAR odometry from CompSLAM,
 * Left and Right GNSS measurements,

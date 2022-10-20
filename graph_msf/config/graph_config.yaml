@@ -1,0 +1,3 @@
+#Common
+common_params:
+  verbosity: 0                         #Debug Output, 0: only important events, 1: optimization duration, 2: added factors
