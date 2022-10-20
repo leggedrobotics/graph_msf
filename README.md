@@ -4,9 +4,7 @@
 , [Shehryar Khattak](https://www.linkedin.com/in/shehryar-khattak/)
 , [Marco Hutter](https://rsl.ethz.ch/the-lab/people/person-detail.MTIxOTEx.TGlzdC8yNDQxLC0xNDI1MTk1NzM1.html)
 
-<img src="doc/graph_msf.gif" width="80%" height="60%">
-
-*Copyright IEEE*
+<img src="doc/graph_msf.gif" width="100%" height="60%">
 
 ## Resources 
 **[1] ICRA2022, Philadelphia**
@@ -83,6 +81,8 @@ If you find this code useful, please consider citing
   organization={IEEE}
 }
 ```
+<img src="doc/titleimg.png" width="50%" height="50%">
+*Copyright IEEE*
 
 ## Acknowledgements
 The authors thank Marco Tranzatto, Simon Kerscher, Dominic Jud, Lorenzo Terenzi, Timo Schoenegg and the remaining HEAP 
