@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package>
+  <name>excavator_dual_graph</name>
+  <version>0.0.0</version>
+
+  <description>
+    State estimation based on factor graphs, utilizing GTSAM functionality. Fusion of IMU, LiDAR Mapping Odometry and GNSS estimates.
+  </description>
+
+  <maintainer email="nubertj@ethz.ch">Julian Nubert</maintainer>
+  <license>BSD</license>
+  <author email="nubertj@ethz.ch">Julian Nubert</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>graph_msf</build_depend>
+  <build_depend>graph_msf_ros</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <build_depend>message_filters</build_depend>
+
+  <run_depend>graph_msf</run_depend>
+  <run_depend>graph_msf_ros</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>std_srvs</run_depend>
+  <run_depend>message_filters</run_depend>
+  <run_depend>heap_urdf</run_depend>
+
+  <test_depend>rostest</test_depend>
+  <test_depend>rosbag</test_depend>
+
+</package>

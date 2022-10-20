@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<launch>
+    <!-- Input Topics -->
+    <arg name="imu_topic_name"            default="/sensors/imu" />
+    <arg name="lidar_odometry_topic_name" default="/laser_odom_top" />
+    <arg name="gnss_left_topic_name"      default="/m545_gnss_left" />
+    <arg name="gnss_right_topic_name"     default="/m545_gnss_right" />
+
+    <!-- Output Topics -->
+    <arg name="odometry_topic_name"       value="/fg_filtering/transform_world_lidar" />
+
+    <!-- Config -->
+    <arg name="extrinsics_from_urdf"      default="true" />
+    <arg name="using_gps"                 default="false" />
+    <arg name="using_lio"                 default="true" />
+    <arg name="imu_gravity_direction"     default="up" />
+
+    <!-- Description -->
+    <arg name="description_name"          default="/romo_description" />
+
+    <!-- Parameters -->
+    <param name="use_sim_time" value="true"/>
+
+    <!-- Node -->
+    <node pkg="compslam_se_ros" type="compslam_se_ros_node" name="estimator_node" output="screen" > <!-- launch-prefix="gdb -args"-->
+        <!-- Launch Parameters -->
+        <param name="launch/description_name" type="string" value="$(arg description_name)" />
+        <param name="launch/imu_gravity_direction" type="string" value="$(arg imu_gravity_direction)" />
+        <param name="launch/using_gps" type="bool" value="$(arg using_gps)" />
+        <param name="launch/using_compslam" type="bool" value="$(arg using_lio)" />
+        <!-- Parameter files -->
+        <rosparam file="$(find compslam_se_ros)/config/graph_params.yaml" command="load" />
+        <rosparam file="$(find compslam_se_ros)/config/gnss_params.yaml" command="load" />
+        <rosparam file="$(find compslam_se_ros)/config/extrinsic_params.yaml" command="load" />
+        <!-- Remapping of topics -->
+        <remap from="/imu_topic" to="$(arg imu_topic_name)" />
+        <remap from="/lidar_odometry_topic" to="$(arg lidar_odometry_topic_name)" />
+        <remap from="/gnss_topic_left" to="$(arg gnss_left_topic_name)" />
+        <remap from="/gnss_topic_right" to="$(arg gnss_right_topic_name)" />
+    </node>
+
+    <!-- RVIZ for Visualization -->
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find compslam_se_ros)/rviz/vis.rviz" />
+
+</launch>

@@ -1,0 +1,54 @@
+# Sensor Params
+sensor_params:
+  imuRate: 100                             #Rate of IMU input (Hz)
+  imuBufferLength: 200
+  lidarOdometryRate: 5
+  gnssRate: 20
+  imuTimeOffset: 0.0 # Offset between IMU and LiDAR Measurements: can be determined with rqt_multiplot
+
+# Factor Graph
+graph_params:
+  useIsam: true # if false, then levenberg-marquardt is used
+  smootherLag: 1.5                         #Lag of fixed lag smoother[seconds], not needed for ISAM2
+  additionalOptimizationIterations: 0                  #Additional iterations of graph optimizer after update with new factors
+  findUnusedFactorSlots: false
+  enableDetailedResults: false
+  usingFallbackGraph: true
+
+# Outlier Rejection
+outlier_params:
+  gnssOutlierThreshold: 0.2 # in meters, if jumping more than this, it is considered as absent GNSS, occurs between two GNSS measurements
+
+# Noise Parameters
+noise_params:
+  ## IMU
+  ### Accelerometer
+  accNoiseDensity: 7.225e-08                #Continuous-time "Covariance" of accelerometer, microstrain: sigma^2=7.225e-7
+  accBiasRandomWalk: 1.0e-05                #Continuous-time "Covariance" describing accelerometer bias random walk, default: 1.0e-06
+  accBiasPrior: 0.0                         #Prior/starting value of accelerometer bias
+  ### Gyro
+  gyrNoiseDensity: 1.71e-08               #Continuous-time "Covariance" of gyroscope measurements, microstrain: sigma^2=1.71-08
+  gyrBiasRandomWalk: 9.33e-06 #gnss:9.33e-08 #lidar: 9.33e-01            #Continuous-time "Covariance" describing gyroscope bias random walk, default: 9.33e-08
+  gyrBiasPrior: 0.0                        #Prior/starting value of gyroscope bias
+  ### Preintegration
+  integrationNoiseDensity: 1.0e-03         #continuous-time "Covariance" describing integration uncertainty, default: 1.0e-06
+  biasAccOmegaPreInt: 1.0e-03                 #covariance of bias used for preintegration, default: 1.0e-2
+  ## LiDAR
+  poseBetweenNoise: [ 10.0, 10.0, 10.0, 2.0, 2.0, 2.0 ] # gnss [ 10.0, 10.0, 10.0, 2.0, 2.0, 2.0 ] # lidar: [ 1000.0, 1000.0, 1000.0, 100.0, 100.0, 100.0 ] #Noise of add between factor -ORDER RPY(rad) - XYZ(meters)
+  poseUnaryNoise: [ 1000.0, 1000.0, 10.0, 10.0, 10.0, 10.0 ] # ORDER RPY(rad) - XYZ(meters) First tests:  [ 1000.0, 1000.0, 1000.0, 2.0, 2.0, 2.0 ]
+  ## GNSS
+  gnssPositionUnaryNoise: 1.0 #1.0e-02 # x, y, z of global position
+  gnssHeadingUnaryNoise: 1.0 # x,y,z of heading vector
+
+# Relinearization
+relinearization_params:
+  positionReLinTh: 5.0e-10                    #Position linearization threshold
+  rotationReLinTh: 1.0e-10                    #Rotation linearization threshold
+  velocityReLinTh: 1.0e-10                     #Linear Velocity linearization threshold
+  accBiasReLinTh: 1.0e-10                      #Accelerometer bias linearization threshold
+  gyrBiasReLinTh: 1.0e-10                      #Gyroscope bias linearization threshold
+  relinearizeSkip: 1
+  enableRelinearization: true
+  evaluateNonlinearError: false
+  cacheLinearizedFactors: true
+  enablePartialRelinearizationCheck: true
