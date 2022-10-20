@@ -1,4 +1,4 @@
-# Graph-MSF: Graph-based State Multi-sensor Fusion for Consistent Localization and State Estimation
+# Graph-MSF: Graph-based Multi-sensor Fusion for Consistent Localization and State Estimation
 
 **Authors:** [Julian Nubert](https://juliannubert.com/) ([nubertj@ethz.ch](mailto:nubertj@ethz.ch?subject=[GitHub]))
 , [Shehryar Khattak](https://www.linkedin.com/in/shehryar-khattak/)
