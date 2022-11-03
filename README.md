@@ -27,7 +27,7 @@ components for this specific use-case.
 [ETH Zurich Robotic Summer School](https://ethz-robotx.github.io/SuperMegaBot/) will follow shortly.
 
 <img src="doc/titleimg.png" width="50%" height="50%">
-**© IEEE**
+© **IEEE**
 
 **Disclaimer:** The framework is still under development and will be updated, extended, and more generalized in the future.
 
