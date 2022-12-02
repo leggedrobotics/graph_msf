@@ -11,6 +11,7 @@ Please see the LICENSE file that has been included as part of this package.
 
 // C++
 #include <map>
+#include <mutex>
 
 // Eigen
 #include <Eigen/Dense>
